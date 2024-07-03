@@ -1,36 +1,102 @@
 <template>
-  <nav class="flex justify-between items-center p-4 bg-gray-800 text-white">
-    <div class="flex items-center">
-      <div class="text-2xl font-bold mr-8">NORNLIGHT</div>
-      <div class="space-x-4">
-        <a href="#" class="hover:underline">О компании</a>
-        <a href="#" class="hover:underline">Доставка и оплата</a>
-        <a href="#" class="hover:underline">Возврат</a>
-        <a href="#" class="hover:underline">Гарантии</a>
-        <a href="#" class="hover:underline">Контакты</a>
-        <a href="#" class="hover:underline">Блог</a>
+  <div class="container mx-auto">
+    
+    <div class="hidden md:flex justify-between">
+      <div class="flex gap-4">
+        <button class="text-gray-500 hover:text-black ">О компании</button>
+        <button class="text-gray-500 hover:text-black">Доставка и оплата</button>
+        <button class="text-gray-500 hover:text-black">Возврат</button>
+        <button class="text-gray-500 hover:text-black">Гарантии</button>
+        <button class="text-gray-500 hover:text-black">Контакты</button>
+        <button class="text-gray-500 hover:text-black">Блог</button>
+      </div>
+
+      <div class="hidden md:flex gap-4">
+        <p>8 (800) 890-46-56</p>
+        <button class="text-gray-500 hover:text-black">Заказать звонок</button>
+      </div>
+
+      <div class="md:hidden flex items-center gap-4">
+        <button @click="toggleMenu" class="flex items-center gap-2">
+          <svg class="w-6 h-6 bg-black" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 1H25M0 8H18M0 15H25" stroke="black" stroke-width="2" />
+          </svg>
+        </button>
       </div>
     </div>
-    <div class="flex items-center space-x-4">
-      <input type="text" placeholder="Поиск по товарам" class="px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
-      <div class="flex items-center space-x-4">
-        <a href="#" class="hover:underline">Избранное</a>
-        <a href="#" class="hover:underline">Сравнение</a>
-        <a href="#" class="relative hover:underline">
-          Корзина
-          <span class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">1</span>
-        </a>
+     <div v-if="isMenuOpen" class="md:hidden bg-white shadow-md p-4">
+      <div class="flex flex-col gap-2">
+        <button class="text-gray-500 hover:text-black">О компании</button>
+        <button class="text-gray-500 hover:text-black">Доставка и оплата</button>
+        <button class="text-gray-500 hover:text-black">Возврат</button>
+        <button class="text-gray-500 hover:text-black">Гарантии</button>
+        <button class="text-gray-500 hover:text-black">Контакты</button>
+        <button class="text-gray-500 hover:text-black">Блог</button>
+        <div class="flex justify-between items-center">
+          <p>8 (800) 890-46-56</p>
+          <button class="text-gray-500 hover:text-black">Заказать звонок</button>
+        </div>
       </div>
-      <div class="flex flex-col items-end">
-        <a href="tel:88008904656" class="hover:underline">8 (800) 890-46-56</a>
-        <a href="#" class="hover:underline">Заказать звонок</a>
-      </div>
+    
+
+
+
+
     </div>
-  </nav>
+    <div class="container mx-auto pt-4">
+      <div class="flex justify-between">
+   <div class="flex gap-4">
+    <img class="" src="/public/logo.png" alt="">
+    <h1 class=" text-4xl text-[#454545]">NORNLIGHT
+    </h1>
+   </div>
+  
+<div class="flex border rounded-full bg-[#454545] px-7 gap-4 py-3">
+  <svg class="mt-2" width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 1H25M0 8H18M0 15H25" stroke="white" stroke-width="2"/>
+</svg>
+<p class="text-white">Каталог</p>
+
+</div>
+
+            <div class="flex gap-4 items-center relative  ">
+      <input type="text" placeholder="Поиск по товарам" class="border-2 border-gray-300  px-28 py-2 rounded-full focus:outline-none" />
+      <img class="absolute top-1/2 -translate-y-1/2 right-0 -translate-x-3/4 z-10" src="/public/poisk.svg" alt="">
+    </div>
+
+
+<div class="hidden md:flex gap-6">
+    <div >
+<img class="mx-auto hover" src="/public/heart.svg" alt="">
+<p>Избранное</p>
+    </div>
+    <div>
+<img class="mx-auto"  src="/public/icon.svg" alt="">
+<p>Сравнение</p>
+    </div>
+    <div>
+<img class="mx-auto"  src="/public/karzina.svg" alt="">
+<p>Корзина</p>
+    </div>
+    </div>
+    </div>
+     </div>
+  </div>
+  
+
 </template>
 
-<script>
-export default {
-  name: 'Navbar',
+<script setup>
+import { ref } from 'vue';
+
+const isMenuOpen = ref(false);
+
+function toggleMenu() {
+  isMenuOpen.value = !isMenuOpen.value;
 }
+  
 </script>
+
+<style scoped>
+
+</style>
