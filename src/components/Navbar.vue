@@ -39,7 +39,12 @@
       </div>
     </div>
 
-    <div class="container mx-auto mt-8">
+
+  <div
+    class="sticky top-0 left-0 w-full py-3 z-30"
+    :class="isScrolled ? 'backdrop-blur-lg bg-gradient-to-r' : 'bg-white'"
+  >
+    <div class="container mx-auto mt-8 sticky z-0">
       <div class="flex justify-between">
         <div class="flex gap-4">
           <img class="" src="/public/logo.png" alt="">
@@ -73,6 +78,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
 
     <!-- Modal -->
@@ -109,6 +115,13 @@ function toggleModal() {
 function handleSubmit() {
   toggleModal();
   // Logic for form submission can be added here if needed
+
+  const isScrolled = ref(false);
+
+  const handleScroll = () => {
+  isScrolled.value = window.scrollY > 0;
+};
+
 }
 </script>
 
