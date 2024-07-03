@@ -12,7 +12,7 @@
     </div>
 
 
-    <div class="grid grid-cols-4 gap-4 mt-12">
+    <div class="grid md:grid-cols-4 gap-4 mt-12">
         <div class="border text-center rounded-xl hover:shadow-lg">
             <img class="p-4  mt-4 border mx-12 bg-[#454545] rounded-xl py-[15px]" src="/public/about1.svg" alt="">
             <h1 class="text-2xl font-medium mt-14">Только проверенные бренды</h1>

@@ -7,6 +7,8 @@
 <AboutCompany />
 <Products />
 <Brend />
+<Blogs />
+<Words />
     </div>
 </template>
 
@@ -17,6 +19,8 @@ import Katalog from "../components/Katalog.vue"
 import AboutCompany from "../components/AboutCompany.vue"
 import Products from "../components/Products.vue"
 import Brend from "../components/Brend.vue"
+import Blogs from "../components/Blogs.vue"
+import Words from "../components/Words.vue"
 </script>
 
 <style lang="scss" scoped>

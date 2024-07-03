@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex justify-center">
+  <div class="md:w-full md:flex justify-center">
     <div class="bg-[#F2F2F2] mx-[5%] mt-8 rounded-3xl  ">
       <div class="container ">
         <swiper
@@ -16,7 +16,7 @@
         >
           
           <swiper-slide v-for="(item, index) in 8" :key="index">
-            <div class="flex gap-24 mb-14 px-12">
+            <div class="md:flex gap-24 mb-14 px-12">
               <h1 class="text-[64px] mt-[64px] font-bold leading-[75px]">
                 Скидка 15% на все подвесные светильники
                 <span
