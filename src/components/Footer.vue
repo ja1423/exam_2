@@ -1,6 +1,5 @@
-
 <template>
-  <div class="bg-second py-[79px] max-md:py-10 ">
+  <div class="bg-second py-[79px] max-md:py-10">
     <div class="container mt-12">
       <div class="flex max-md:flex-col max-md:gap-5 w-full justify-between">
         <div class="flex flex-col md:w-1/4 gap-[35px]">
@@ -14,22 +13,36 @@
             Политика конфидециальности
           </p>
           <div class="flex gap-3">
-            <button
-              v-for="(item, index) in 3"
-              :key="index"
-              class="h-9 w-9 rounded-full border-2 border-primary text-primary font-semibold"
-            >
-              VK
-            </button>
+            <button class="h-9 w-9 rounded-full border-2 border-primary text-primary font-semibold">VK</button>
+            <button class="h-9 w-9 rounded-full border-2 border-primary text-primary font-semibold">VK</button>
+            <button class="h-9 w-9 rounded-full border-2 border-primary text-primary font-semibold">VK</button>
           </div>
         </div>
-        <div
-          v-for="(item, index) in datas"
-          :key="index"
-          class="text-]"
-        >
-          <h4 :class="index == 2 ? 'text-transparent': '' " class="mb-8">{{ datas[index].title }}</h4>
-            <p class="cursor-pointer hover:underline mb-[27px] opacity-50" v-for="(item, index2) in datas[index].info" :key="index2">{{ item }}</p>
+        <div class="text-]">
+          <h4 class="mb-6">Покупателям</h4>
+             <router-link  to="/aboutus" class="cursor-pointer text-gray-500 hover:text-black mb-8">О компании</router-link>
+          <p class="cursor-pointer hover:underline mb-[27px] opacity-50 mt-4">Доставка и оплата</p>
+          <p class="cursor-pointer hover:underline mb-[27px] opacity-50">Возврат</p>
+          <p class="cursor-pointer hover:underline mb-[27px] opacity-50">Гарантии</p>
+          <p class="cursor-pointer hover:underline mb-[27px] opacity-50">Контакты</p>
+          <p class="cursor-pointer hover:underline mb-[27px] opacity-50">Блог</p>
+        </div>
+        <div class="text-]">
+          <h4 class="mb-8">Товары</h4>
+          <p class="cursor-pointer hover:underline mb-[27px] opacity-50">Люстры</p>
+          <p class="cursor-pointer hover:underline mb-[27px] opacity-50">Светильники</p>
+          <p class="cursor-pointer hover:underline mb-[27px] opacity-50">Бра</p>
+          <p class="cursor-pointer hover:underline mb-[27px] opacity-50">Торшеры</p>
+          <p class="cursor-pointer hover:underline mb-[27px] opacity-50">Комплектуюшие</p>
+          <p class="cursor-pointer hover:underline mb-[27px] opacity-50">Настольные лампы</p>
+        </div>
+        <div class="text-]">
+          <h4 class="text-transparent mb-8">Товары</h4>
+          <p class="cursor-pointer hover:underline mb-[27px] opacity-50">Споты</p>
+          <p class="cursor-pointer hover:underline mb-[27px] opacity-50">Трековые светильники</p>
+          <p class="cursor-pointer hover:underline mb-[27px] opacity-50">Уличные светильники</p>
+          <p class="cursor-pointer hover:underline mb-[27px] opacity-50">Технические светильники</p>
+          <p class="cursor-pointer hover:underline mb-[27px] opacity-50">Светодиодные ленты</p>
         </div>
       </div>
     </div>
@@ -38,41 +51,6 @@
 
 <script setup>
 import { useRouter } from 'vue-router';
-import { ref } from 'vue';
-const router = useRouter();
 
-const datas = ref([
-  {
-    title: "Покупателям",
-    info: [
-      "О компании",
-      "Доставка и оплата",
-      "Возврат",
-      "Гарантии",
-      "Контакты",
-      "Блог",
-    ],
-  },
-  {
-    title: "Товары",
-    info: [
-      "Люстры",
-      "Светильники",
-      "Бра",
-      "Торшеры",
-      "Комплектуюшие",
-      "Настольные лампы",
-    ],
-  },
-  {
-    title: "Товары",
-    info: [
-      "Споты",
-      "Трековые светильники",
-      "Уличные светильники",
-      "Технические светильники",
-      "Светодиодные ленты",
-    ],
-  },
-]);
+const router = useRouter();
 </script>
