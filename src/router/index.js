@@ -9,6 +9,11 @@ const router = createRouter({
       component: () => import("../pages/Home.vue"),
     },
     {
+      path: "/aboutus",
+      name: "aboutcom",
+      component: () => import("../pages/AboutCompany.vue"),
+    },
+    {
       path: "/:pathMatch(.*)*",
       name: "404",
       component: () => import("../pages/NotFound.vue"),

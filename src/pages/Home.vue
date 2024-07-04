@@ -9,7 +9,7 @@
 <Brend />
 <Blogs />
 <Words />
-<!-- <Footer />  -->
+<Footer /> 
     </div>
 </template>
 
@@ -22,7 +22,7 @@ import Products from "../components/Products.vue"
 import Brend from "../components/Brend.vue"
 import Blogs from "../components/Blogs.vue"
 import Words from "../components/Words.vue"
-// import Footer from "../components/Footer.vue"
+import Footer from "../components/Footer.vue"
 </script>
 
 <style lang="scss" scoped>

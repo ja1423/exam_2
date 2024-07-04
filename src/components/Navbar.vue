@@ -2,7 +2,8 @@
   <div class="container mt-4">
     <div class="hidden md:flex justify-between">
       <div class="flex gap-4">
-        <button class="text-gray-500 hover:text-black">О компании</button>
+      
+        <router-link  to="/aboutus" class="text-gray-500 hover:text-black">О компании</router-link>
         <button class="text-gray-500 hover:text-black">
           Доставка и оплата
         </button>
@@ -63,8 +64,8 @@
               </svg>
             </button>
           </div>
-          <div class="flex gap-4 max-md:gap-2 max-md:items-center">
-            <img class="md:w-full max-md:w-1/3" src="/public/logo.svg" alt="" />
+          <div class="flex gap-4 max-md:gap-2 max-md:items-center" >
+            <img  @click="router.push('/')" class="md:w-full max-md:w-1/3" src="/public/logo.svg" alt="" />
             <h1 class="md:text-4xl text-2xl text-[#454545]">NORNLIGHT</h1>
           </div>
 
@@ -138,9 +139,9 @@
     <!-- Modal -->
     <div
       v-if="isModalOpen"
-      class="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center z-50"
+      class="fixed inset-0 bg-gray-600 bg-opacity-50 flex md:justify-center items-center z-50 "
     >
-      <div class="bg-white p-8 rounded-2xl shadow-lg relative px-32 py-20">
+      <div class="bg-white md:p-8 rounded-2xl shadow-lg relative md:px-32 px-12 py-20">
         <button
           @click="toggleModal"
           class="absolute top-2 right-2 text-gray-600 hover:text-black px-5 py-4 size-5"

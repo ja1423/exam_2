@@ -1,10 +1,10 @@
 
 <template>
-  <div class="bg-second py-[79px] max-md:py-10">
-    <div class="container">
+  <div class="bg-second py-[79px] max-md:py-10 ">
+    <div class="container mt-12">
       <div class="flex max-md:flex-col max-md:gap-5 w-full justify-between">
         <div class="flex flex-col md:w-1/4 gap-[35px]">
-          <img src="/public/logo.png" @click="router.push('/')" class="w-3/4 max-md:w-1/2 cursor-pointer" alt="logo" />
+          <img src="/public/logo1.png" @click="router.push('/')" class="w-3/4 max-md:w-1/2 cursor-pointer" alt="logo" />
           <p class="text-primary text-2xl font-semibold">8 (800) 890-46-56</p>
           <img src="/public/card.png" class="w-3/4 max-md:w-1/2 cursor-pointer" alt="card" />
           <p class="font-semibold underline opacity-50 cursor-pointer">
@@ -37,7 +37,8 @@
 </template>
 
 <script setup>
-
+import { useRouter } from 'vue-router';
+import { ref } from 'vue';
 const router = useRouter();
 
 const datas = ref([

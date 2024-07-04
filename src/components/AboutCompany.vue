@@ -6,7 +6,7 @@
       <div
         class="max-md:mt-4 max-md:mx-auto flex items-center py-[8px] cursor-pointer w-56 gap-[10px] hover:gap-4 duration-300 hover:bg-[#454545] hover:text-white rounded-full border border-[#454545]"
       >
-        <p class="ml-12 font-medium text-primary">О компании</p>
+         <router-link  to="/aboutus" class="ml-12 font-medium text-primary">О компании</router-link>
         <p class="text-2xl font-medium mb-1 text-primary">&rarr;</p>
       </div>
     </div>
