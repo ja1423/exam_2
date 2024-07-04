@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^1.7.2",
+    "sass": "^1.77.6",
     "swiper": "^11.1.4",
     "vue": "^3.4.29",
     "vue-router": "^4.4.0",

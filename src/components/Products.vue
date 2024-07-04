@@ -1,10 +1,10 @@
 <template>
     <div class="container mx-auto">
-         <div class="justify-between flex mt-16">
+         <div class="md:justify-between md:flex mt-16 max-md:text-center">
       <h1 class="text-3xl font-extralight">Популярные товары</h1>
 
       <div
-        class="flex items-center py-[8px] cursor-pointer w-56 gap-[10px] hover:gap-4 duration-300 hover:bg-[#454545] hover:text-white rounded-full border border-[#454545]"
+        class="max-md:mt-4 max-md:mx-auto flex items-center py-[8px] cursor-pointer w-56 gap-[10px] hover:gap-4 duration-300 hover:bg-[#454545] hover:text-white rounded-full border border-[#454545]"
       >
         <p class="ml-12 font-medium text-primary">Все товары</p>
         <p class="text-2xl font-medium mb-1 text-primary">&rarr;</p>

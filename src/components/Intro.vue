@@ -16,15 +16,15 @@
         >
           
           <swiper-slide v-for="(item, index) in 8" :key="index">
-            <div class="md:flex gap-24 mb-14 px-12">
-              <h1 class="text-[64px] mt-[64px] font-bold leading-[75px]">
+            <div class="md:flex flex max-md:flex-col-reverse gap-24 mb-14 px-12">
+              <h1 class="md:text-[64px] text-[40px] mt-[64px] px-4 font-bold md:leading-[75px]">
                 Скидка 15% на все подвесные светильники
                 <span
-                  class="bg-[#454545] inline-block rounded-full text-white px-20 mt-10"
+                  class="bg-[#454545] inline-block rounded-full text-white px-12 md:px-20 mt-10"
                   >до 5 февраля</span
                 >
               </h1>
-              <img src="/public/intro.png" class="w-[35%] mr-[66px]" alt="Candle" />
+              <img src="/public/intro.png" class="md:w-[35%] md:mr-[66px]" alt="Candle" />
             </div>
           </swiper-slide>
         </swiper>
