@@ -1,5 +1,5 @@
 <template>
-  <div class="md:w-full md:flex justify-center">
+  <div class="md:w-full  md:flex justify-center">
     <div class="bg-[#F2F2F2] mx-[5%] mt-8 rounded-3xl  ">
       <div class="container ">
         <swiper

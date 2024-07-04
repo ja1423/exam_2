@@ -11,8 +11,8 @@
       </div>
     </div>
 
-    <div class=" grid md:grid-cols-3 gap-16 mt-10">
-      <div class="flex justify-between border px-5 w-[450px] bg-[#F2F2F2] rounded-3xl py-5 hover:shadow-lg">
+    <div class=" grid md:grid-cols-3 gap-16 mt-10 max-md:pr-3">
+      <div class="flex justify-between border px-5 w-[400px] md:w-[450px] bg-[#F2F2F2] rounded-3xl py-5 hover:shadow-lg">
         <div>
           <h1 class="font-extralight text-3xl">Люстры</h1>
           <div class="flex mt-24 gap-3">
@@ -33,7 +33,7 @@
         </div>
         <img src="/public/katalog4.png" alt="" />
       </div>
-      <div class="flex justify-between border w-[450px]  bg-[#F2F2F2] rounded-3xl py-5 hover:shadow-lg">
+      <div class="flex justify-between border w-[400px] md:w-[450px]  bg-[#F2F2F2] rounded-3xl py-5 hover:shadow-lg">
         <div>
           <h1 class="font-extralight text-2xl">Светильники</h1>
           <div class="flex mt-24 gap-3">
@@ -54,7 +54,7 @@
         </div>
         <img src="/public/katalog.png" alt="" />
       </div>
-      <div class="flex justify-between border px-5 w-[450px] bg-[#F2F2F2] rounded-3xl py-5 hover:shadow-lg">
+      <div class="flex justify-between border px-5 w-[400px] md:w-[450px] bg-[#F2F2F2] rounded-3xl py-5 hover:shadow-lg">
         <div>
           <h1 class="font-extralight text-3xl">Бра</h1>
           <div class="flex mt-24 gap-3">
@@ -75,7 +75,7 @@
         </div>
         <img src="/public/katalog3.png" alt="" />
       </div>
-      <div class="flex justify-between border px-5 w-[450px] bg-[#F2F2F2] rounded-3xl py-5 hover:shadow-lg">
+      <div class="flex justify-between border px-5 w-[400px] md:w-[450px] bg-[#F2F2F2] rounded-3xl py-5 hover:shadow-lg">
         <div>
           <h1 class="font-extralight text-3xl">Торшеры</h1>
           <div class="flex mt-24 gap-3">
@@ -96,7 +96,7 @@
         </div>
         <img src="/public/katalog6.png" alt="" />
       </div>
-       <div class="flex justify-between border px-5 w-[450px] bg-[#F2F2F2] rounded-3xl py-5 hover:shadow-lg">
+       <div class="flex justify-between border px-5 w-[400px] md:w-[450px] bg-[#F2F2F2] rounded-3xl py-5 hover:shadow-lg">
         <div>
           <h1 class="font-extralight text-3xl">Настольные лампы</h1>
           <div class="flex mt-24 gap-3">
@@ -117,7 +117,7 @@
         </div>
         <img src="/public/katalog2.png" alt="" />
       </div>
-      <div class="flex justify-between border px-5 w-[450px] bg-[#F2F2F2] rounded-3xl py-5 hover:shadow-lg">
+      <div class="flex justify-between border px-5 w-[400px] md:w-[450px] bg-[#F2F2F2] rounded-3xl py-5 hover:shadow-lg">
         <div>
           <h1 class="font-extralight text-3xl">Споты</h1>
           <div class="flex mt-24 gap-3">

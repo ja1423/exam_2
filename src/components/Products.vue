@@ -11,23 +11,27 @@
       </div>
     </div>
 
-        <!-- <div class="grid grid-cols-4 gap-5">
+    <div class="grid md:grid-cols-4 grid-cols-2 gap-2 md:gap-5 mt-8">
       <div
-        class=" w-full h-full duration-300 hover:shadow-lg flex gap-4 flex-col"
+        class="w-full h-full duration-300 hover:shadow-lg flex gap-4 flex-col"
         v-for="(item, index) in products"
         :key="index"
       >
         <div class="relative">
           <img :src="item.image" alt="Product Image" />
           <img
-            class="z-10 absolute top-0 right-0 translate-y-3/4 -translate-x-3/4 cursor-pointer"
+            class="z-10 max-md:hidden absolute top-0 right-0 translate-y-3/4 -translate-x-3/4 cursor-pointer text-white"
             @click="toggleLike(item.id)"
-            :src="item.liked ? '/like2.svg' : '/like.svg'"
+            :src="item.liked ? '/heart.svg' : '/heart.svg'"
             alt="Like Button"
           />
         </div>
-        <div class="p-[27px] pt-[11px] flex flex-col justify-between h-full gap-6 w-full">
-          <p class="text-primary font-medium line-clamp-2 leading-[22px] text-xl">
+        <div
+          class="md:p-[27px] p-4 pt-[11px] flex flex-col justify-between h-full md:gap-6 gap-3 w-full"
+        >
+          <p
+            class="text-primary font-extralight line-clamp-2 max-md:line-clamp-3 md:leading-[22px] leading-[17px] md:text-xl"
+          >
             {{ item.title }}
           </p>
           <div class="div">
@@ -40,21 +44,22 @@
               </p>
               <img
                 @click="toggleShopped(item.id)"
-                class="py-2 p-5 cursor-pointer rounded-full w-[23%]"
-                :src="item.shopped ? '/cart3.svg' : '/cart2.svg'"
+                class="py-2 text-white max-md:py-1 p-5 max-md:px-3 cursor-pointer rounded-full w-[23%] max-md:w-[35%]"
+                :src="item.shopped ? '/card.svg' : '/card.svg'"
                 :class="
-                  item.shopped ? 'bg-white border border-primary' : 'bg-primary'
+                  item.shopped ? 'bg-white border border-[#454545]' : 'bg-[#454545]'
                 "
                 alt="Cart Button"
               />
             </div>
-        
+          </div>
         </div>
       </div>
     </div>
 
-    </div> -->
 
+
+     
     </div>
 
 </template>

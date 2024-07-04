@@ -1,59 +1,118 @@
 <template>
-  <div class="container">
-    <div class="md:justify-between md:flex max-md:mx-auto max-md:justify-center mt-16">
-      <h1 class="text-3xl font-extralight max-md:max-w-[500px] max-md:text-center">Только проверенные бренды</h1>
-      <div
-        class="flex items-center py-[8px] max-md:mx-auto max-md:mt-4 cursor-pointer w-56 gap-[10px] hover:gap-4 duration-300 hover:bg-[#454545] hover:text-white rounded-full border border-[#454545]"
-      >
-        <p class="ml-12 font-medium text-primary">Все товары</p>
-        <p class="text-2xl font-medium mb-1 text-primary">&rarr;</p>
+  <div class="container md:py-[71px] max-md:pt-[60px]">
+    <div class="flex w-full items-center md:mb-[71px] mb-[28] justify-between">
+      <h4 class="text-primary font-bold text-[40px] max-md:text-[28px]">
+        Только проверенные бренды
+      </h4>
+      <div class="flex gap-[10px] max-md:hidden items-center">
+        <button
+          class="text-2xl h-[26px] duration-300 w-[39px] group hover:opacity-100 active:bg-primary flex items-center justify-center border border-primary rounded-full opacity-50"
+          @click="decreaseSpeed"
+        >
+          <span class="mb-1.5 group-hover:text-primary text-primary group-active:text-white">&#8592;</span>
+        </button>
+        <button
+          class="text-2xl h-[26px] w-[39px] duration-300 hover:opacity-100 group active:bg-primary flex items-center justify-center border border-primary rounded-full opacity-50"
+          @click="increaseSpeed"
+        >
+          <span class="mb-1.5 group-hover:text-primary text-primary group-active:text-white">&rarr;</span>
+        </button>
       </div>
     </div>
-
-    <swiper
-      class="carousel-wrapper mt-12"
-      :slides-per-view="4"
-      :space-between="30"
-      :loop="true"
-      :autoplay="{ delay: 3000 }"
+    <div
+      class="carousel-wrapper "
+      :style="{ '--ani-speed': `${animationSpeed}s` }"
     >
-      <swiper-slide v-for="(brand, index) in brands" :key="index" class="item">
-        <img :src="brand.src" :alt="brand.alt">
-      </swiper-slide>
-    </swiper>
+      <div class="carousel">
+        <!-- Render each logo item -->
+        <div class="item" v-for="(item, index) in logos" :key="index">
+          <img :src="item.src" :alt="item.alt" />
+        </div>
+        <!-- Duplicate items to ensure smooth scrolling -->
+        <div
+          class="item"
+          v-for="(item, index) in logos"
+          :key="'duplicate-' + index"
+        >
+          <img :src="item.src" :alt="item.alt" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import { Swiper, SwiperSlide } from 'swiper/vue';
-// import 'swiper/swiper-bundle.min.css';
+import { ref } from "vue";
 
-const brands = ref([
-  { src: '/public/tovar.png', alt: 'Brand 1' },
-  { src: '/public/tovar2.png', alt: 'Brand 2' },
-  { src: '/public/tovar3.png', alt: 'Brand 3' },
-  { src: '/public/tovar.png', alt: 'Brand 4' },
-  { src: '/public/tovar2.png', alt: 'Brand 5' },
-  { src: '/public/tovar3.png', alt: 'Brand 6' },
-  { src: '/public/tovar.png', alt: 'Brand 7' },
-  { src: '/public/tovar2.png', alt: 'Brand 8' },
-  { src: '/public/tovar3.png', alt: 'Brand 9' },
-]);
+const logos = [
+  { src: "/tovar.png", alt: "Brand 1" },
+  { src: "/tovar3.png", alt: "Brand 2" },
+  { src: "/tovar2.png", alt: "Brand 3" },
+  { src: "/tovar3.png", alt: "Brand 1" },
+  { src: "/tovar2.png", alt: "Brand 2" },
+  { src: "/tovar.png", alt: "Brand 3" },
+  { src: "/tovar3.png", alt: "Brand 1" },
+  { src: "/tovar.png", alt: "Brand 2" },
+  { src: "/tovar2.png", alt: "Brand 3" },
+];
+
+const animationSpeed = ref(30); // Initial speed in seconds
+
+const increaseSpeed = () => {
+  animationSpeed.value = Math.max(10, animationSpeed.value - 5); // Decrease speed (increase animation speed)
+};
+
+const decreaseSpeed = () => {
+  animationSpeed.value = Math.min(60, animationSpeed.value + 5); // Increase speed (decrease animation speed)
+};
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 :root {
   --bg-clr: #64748b;
 }
 
 .carousel-wrapper {
+  --width: 300px; /* Adjust as needed */
+  --num-items: 9; /* Number of items to show */
+
   width: 100%; /* Full width */
   overflow: hidden;
   position: relative;
 }
+.carousel-wrapper::before,
+.carousel-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 100%; /* Adjust gradient width as needed */
+  height: 100%;
+  z-index: 1;
+  top: 0;
+}
+.carousel-wrapper::before {
+  left: 0;
+  background-image: linear-gradient(
+    to right,
+    var(--bg-clr) 0%,
+    transparent 100%
+  );
+}
+.carousel-wrapper::after {
+  right: 0;
+  background-image: linear-gradient(
+    to left,
+    var(--bg-clr) 0%,
+    transparent 100%
+  );
+}
 
+.carousel {
+  display: flex;
+  align-items: center;
+  animation: slide var(--ani-speed) linear infinite;
+}
 .item {
+  flex: 1 0 var(--width);
   text-align: center;
   padding: 1rem;
 }
@@ -62,5 +121,11 @@ const brands = ref([
   height: auto; /* Maintain aspect ratio */
   max-height: 120px; /* Adjust maximum height as needed */
   object-fit: contain; /* Ensure the image scales without cropping */
+}
+
+@keyframes slide {
+  100% {
+    transform: translateX(calc(var(--width) * var(--num-items) * -1));
+  }
 }
 </style>
