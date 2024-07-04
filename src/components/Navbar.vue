@@ -8,9 +8,9 @@
           Доставка и оплата
          </router-link>
         <router-link  to="/vozvrat"  class="text-gray-500 hover:text-black">Возврат</router-link>
-        <button class="text-gray-500 hover:text-black">Гарантии</button>
+        <router-link to="guarantee" class="text-gray-500 hover:text-black">Гарантии</router-link>
         <router-link to="/contact" class="text-gray-500 hover:text-black">Контакты</router-link>
-        <button class="text-gray-500 hover:text-black">Блог</button>
+        <router-link to="/blog" class="text-gray-500 hover:text-black">Блог</router-link>
       </div>
 
       <div class="hidden md:flex gap-4">
@@ -23,14 +23,15 @@
 
     <div v-if="isMenuOpen" class="md:hidden bg-white shadow-md p-4">
       <div class="flex flex-col gap-2">
-        <button class="text-gray-500 hover:text-black">О компании</button>
-        <button class="text-gray-500 hover:text-black">
+         <router-link  to="/aboutus" class="text-gray-500 hover:text-black">О компании</router-link>
+     
+         <router-link  to="/delivery" class="text-gray-500 hover:text-black">
           Доставка и оплата
-        </button>
-        <button class="text-gray-500 hover:text-black">Возврат</button>
-        <button class="text-gray-500 hover:text-black">Гарантии</button>
-        <button class="text-gray-500 hover:text-black">Контакты</button>
-        <button class="text-gray-500 hover:text-black">Блог</button>
+         </router-link>
+        <router-link  to="/vozvrat"  class="text-gray-500 hover:text-black">Возврат</router-link>
+        <router-link to="guarantee" class="text-gray-500 hover:text-black">Гарантии</router-link>
+        <router-link to="/contact" class="text-gray-500 hover:text-black">Контакты</router-link>
+        <router-link to="/blog" class="text-gray-500 hover:text-black">Блог</router-link>
         <div class="flex justify-between items-center">
           <p>8 (800) 890-46-56</p>
           <button class="text-gray-500 hover:text-black" @click="toggleModal">
