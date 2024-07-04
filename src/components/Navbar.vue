@@ -7,9 +7,9 @@
          <router-link  to="/delivery" class="text-gray-500 hover:text-black">
           Доставка и оплата
          </router-link>
-        <button class="text-gray-500 hover:text-black">Возврат</button>
+        <router-link  to="/vozvrat"  class="text-gray-500 hover:text-black">Возврат</router-link>
         <button class="text-gray-500 hover:text-black">Гарантии</button>
-        <button class="text-gray-500 hover:text-black">Контакты</button>
+        <router-link to="/contact" class="text-gray-500 hover:text-black">Контакты</router-link>
         <button class="text-gray-500 hover:text-black">Блог</button>
       </div>
 
