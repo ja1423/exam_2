@@ -2,11 +2,11 @@
   <div class="container mt-4">
     <div class="hidden md:flex justify-between">
       <div class="flex gap-4">
-      
-        <router-link  to="/aboutus" class="text-gray-500 hover:text-black">О компании</router-link>
-        <button class="text-gray-500 hover:text-black">
+         <router-link  to="/aboutus" class="text-gray-500 hover:text-black">О компании</router-link>
+     
+         <router-link  to="/delivery" class="text-gray-500 hover:text-black">
           Доставка и оплата
-        </button>
+         </router-link>
         <button class="text-gray-500 hover:text-black">Возврат</button>
         <button class="text-gray-500 hover:text-black">Гарантии</button>
         <button class="text-gray-500 hover:text-black">Контакты</button>
@@ -46,7 +46,7 @@
       class="sticky top-0 left-0 w-full py-3 z-30"
       :class="isScrolled ? 'backdrop-blur-lg bg-gradient-to-r' : 'bg-white'"
     >
-      <div class="container md:mt-8 sticky z-0">
+      <div class="container md:mt-4 sticky z-0">
         <div class="flex md:justify-between items-center gap-4">
           <div class="md:hidden flex items-center gap-4">
             <button @click="toggleMenu" class="flex items-center gap-2">

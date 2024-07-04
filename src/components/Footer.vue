@@ -18,11 +18,14 @@
             <button class="h-9 w-9 rounded-full border-2 border-primary text-primary font-semibold">VK</button>
           </div>
         </div>
-        <div class="text-]">
+        <div class="gap-4">
           <h4 class="mb-6">Покупателям</h4>
-             <router-link  to="/aboutus" class="cursor-pointer text-gray-500 hover:text-black mb-8">О компании</router-link>
-          <p class="cursor-pointer hover:underline mb-[27px] opacity-50 mt-4">Доставка и оплата</p>
-          <p class="cursor-pointer hover:underline mb-[27px] opacity-50">Возврат</p>
+             <router-link  to="/aboutus" class="cursor-pointer text-gray-500 hover:text-black ">О компании</router-link><br />
+          
+         <router-link  to="/delivery" class="cursor-pointer text-gray-500 hover:text-black mt-3 block">
+          Доставка и оплата
+         </router-link>
+          <p class="cursor-pointer hover:underline mb-[27px] opacity-50 mt-4">Возврат</p>
           <p class="cursor-pointer hover:underline mb-[27px] opacity-50">Гарантии</p>
           <p class="cursor-pointer hover:underline mb-[27px] opacity-50">Контакты</p>
           <p class="cursor-pointer hover:underline mb-[27px] opacity-50">Блог</p>
