@@ -39,6 +39,16 @@ const router = createRouter({
       component: () => import("../pages/Guarantee.vue"),
     },
     {
+      path: "/admin",
+      name: "admin",
+      component: () => import("../pages/AdminHeader.vue"),
+    },
+    {
+      path: "/catalog",
+      name: "catalog",
+      component: () => import("../pages/Catalog.vue"),
+    },
+    {
       path: "/:pathMatch(.*)*",
       name: "404",
       component: () => import("../pages/NotFound.vue"),

@@ -6,7 +6,7 @@
       <div
         class="flex items-center py-[8px] max-md:mx-auto max-md:mt-6  cursor-pointer w-56 gap-[10px] hover:gap-4 duration-300 hover:bg-[#454545] hover:text-white rounded-full border border-[#454545]"
       >
-        <p class="ml-12 font-medium text-primary">Весь каталог</p>
+        <router-link to="/catalog" class="ml-12 font-medium text-primary">Весь каталог</router-link>
         <p class="text-2xl font-medium mb-1 text-primary">&rarr;</p>
       </div>
     </div>

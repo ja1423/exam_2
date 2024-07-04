@@ -6,7 +6,7 @@
       <div
         class="max-md:mx-auto max-md:mt-4 flex items-center py-[8px] cursor-pointer w-56 gap-[10px] hover:gap-4 duration-300 hover:bg-[#454545] hover:text-white rounded-full border border-[#454545]"
       >
-        <p class="ml-12 font-medium text-primary">Перейти в блог</p>
+        <router-link to="/blog" class="ml-12 font-medium text-primary">Перейти в блог</router-link>
         <p class="text-2xl font-medium mb-1 text-primary">&rarr;</p>
       </div>
     </div>
