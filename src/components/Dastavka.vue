@@ -7,7 +7,7 @@
 
     <div class="md:flex md:justify-between gap-12">
       <div>
-        <h1 class="text-3xl font-normal max-w-[300px] max-md:text-center max-md:mb-8  text-[#454545]">
+        <h1 class="text-3xl font-normal md:max-w-[300px]  max-md:mb-8 max-md:mt-8 max-md:text-center  text-[#454545]">
           Доставка и оплата
         </h1>
       </div>

@@ -29,6 +29,16 @@ const router = createRouter({
       component: () => import("../pages/Blog.vue"),
     },
     {
+      path: "/vozvrat",
+      name: "vozvrat",
+      component: () => import("../pages/Vozvrat.vue"),
+    },
+    {
+      path: "/guarantee",
+      name: "guarantee",
+      component: () => import("../pages/Guarantee.vue"),
+    },
+    {
       path: "/:pathMatch(.*)*",
       name: "404",
       component: () => import("../pages/NotFound.vue"),

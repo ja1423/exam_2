@@ -25,8 +25,8 @@
          <router-link  to="/delivery" class="cursor-pointer text-gray-500 hover:text-black mt-3 block">
           Доставка и оплата
          </router-link>
-          <p class="cursor-pointer hover:underline mb-[27px] opacity-50 mt-4">Возврат</p>
-          <p class="cursor-pointer hover:underline mb-[27px] opacity-50">Гарантии</p>
+          <router-link  to="/vozvrat"  class="cursor-pointer text-gray-500 hover:text-black mt-3 block">Возврат</router-link>
+        <router-link to="guarantee" class="cursor-pointer text-gray-500 hover:text-black mt-3 block">Гарантии</router-link>
            <router-link to="/contact" class="cursor-pointer text-gray-500 hover:text-black mt-3  mb-3 block">Контакты</router-link>
         <router-link to="/blog" class="cursor-pointer text-gray-500 hover:text-black mt-3  mb-3 block">Блог</router-link>
         </div>
