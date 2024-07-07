@@ -11,7 +11,7 @@
       </div>
     </div>
 
-    <div class=" grid md:grid-cols-3 gap-16 mt-10 max-md:pr-3">
+    <div class=" grid md:grid-cols-3 gap-16 mt-10 max-md:pr-3 ">
       <div class="flex justify-between border px-5 w-[400px] md:w-[450px] bg-[#F2F2F2] rounded-3xl py-5 hover:shadow-lg">
         <div>
           <h1 class="font-extralight text-3xl">Люстры</h1>

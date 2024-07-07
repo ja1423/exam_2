@@ -1,7 +1,7 @@
 <template>
   <div class="container md:py-[71px] max-md:pt-[60px]">
     <div class="flex w-full items-center md:mb-[71px] mb-[28] justify-between">
-      <h4 class="text-primary font-bold text-[40px] max-md:text-[28px]">
+      <h4 class="text-primary font-extralight text-[40px] max-md:text-[28px]">
         Только проверенные бренды
       </h4>
       <div class="flex gap-[10px] max-md:hidden items-center">
